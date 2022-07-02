@@ -1,10 +1,15 @@
 const Flights = require("./models/flight");
 
-exports.getFlights() = asynch (req, res) => {
+//get all Flights
+exports.getFlights = async (req, res) =>{
     try{
-        const flights = await.flights  
-        res.stautus(200).json(flights);
-    }catch (err){
-        res.status(500).json({message: err})
+    const flights = Flights;
+    res.status(200).json({
+        message: "All flights",
+        flights: flights
+    });
+    }catch{
+        res.status(500).json({message: err});
     }
+
 }
