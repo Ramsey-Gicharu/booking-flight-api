@@ -1,6 +1,10 @@
 const express = require("express");
+
 const {json} = require("express");
+
 const app =  express();
+
+app.use(json());
 
 const flight = require("./routes/flightRoute");
 app.use("/flight", flight);
